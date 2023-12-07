@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gv3-hM-d2b">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -64,6 +64,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="-34"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="jwR-M4-8GH">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="Gv3-hM-d2b" customClass="SecondViewController" customModule="_9_10_2023_TableViewDemoDay1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tUD-F4-ye6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z6T-Bq-Soh">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StudentTableViewCell" rowHeight="102" id="HqJ-7E-cxZ" customClass="StudentTableViewCell" customModule="_9_10_2023_TableViewDemoDay1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="102"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HqJ-7E-cxZ" id="ZFd-KT-ii0">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="102"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OON-vu-2Ox"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z6T-Bq-Soh" firstAttribute="centerX" secondItem="tUD-F4-ye6" secondAttribute="centerX" id="C55-my-vvA"/>
+                            <constraint firstItem="Z6T-Bq-Soh" firstAttribute="top" secondItem="OON-vu-2Ox" secondAttribute="top" id="HVB-E1-rlc"/>
+                            <constraint firstItem="OON-vu-2Ox" firstAttribute="bottom" secondItem="Z6T-Bq-Soh" secondAttribute="bottom" id="JAE-lV-zIW"/>
+                            <constraint firstItem="OON-vu-2Ox" firstAttribute="trailing" secondItem="Z6T-Bq-Soh" secondAttribute="trailing" id="ddG-e0-HGs"/>
+                            <constraint firstItem="Z6T-Bq-Soh" firstAttribute="leading" secondItem="OON-vu-2Ox" secondAttribute="leading" id="tjj-vL-mJV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="studentTableView" destination="Z6T-Bq-Soh" id="Ji4-Rv-HiB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZR-c9-WWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953.84615384615381" y="-34.123222748815166"/>
         </scene>
     </scenes>
     <resources>
