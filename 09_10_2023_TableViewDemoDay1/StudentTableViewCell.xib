@@ -55,10 +55,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="studentFirstName" destination="u8g-Pv-1AU" id="unh-U7-31c"/>
+                <outlet property="studentFirstNameLabel" destination="u8g-Pv-1AU" id="lhw-8V-YiB"/>
                 <outlet property="studentImageView" destination="Pcw-9t-M2b" id="4d3-hA-rVf"/>
+                <outlet property="studentLastNameLabel" destination="eVa-aM-oZh" id="Cu0-1B-c5c"/>
             </connections>
-            <point key="canvasLocation" x="-446" y="-53"/>
+            <point key="canvasLocation" x="-589.23076923076917" y="-48.341232227488149"/>
         </tableViewCell>
     </objects>
 </document>

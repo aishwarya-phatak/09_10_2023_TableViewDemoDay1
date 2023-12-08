@@ -10,6 +10,8 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var studentTableView: UITableView!
+    let studentTableViewCellIdentifier = "StudentTableViewCell"
+    //UIImage class used to select images from assets folder
     var studentImageArray = [
         UIImage(named: "nature"),
         UIImage(named: "nature_image2"),
@@ -45,13 +47,28 @@ extension SecondViewController : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
         let studentTableViewCell = self.studentTableView.dequeueReusableCell(withIdentifier: "StudentTableViewCell", for: indexPath) as! StudentTableViewCell
         
+        //binding of data with cell label and imageView
         studentTableViewCell.studentImageView.image = studentImageArray[indexPath.row]
         studentTableViewCell.studentFirstNameLabel.text = studentFirstNameArray[indexPath.row]
         studentTableViewCell.studentLastNameLabel.text = studentLastNameArray[indexPath.row]
         
         return studentTableViewCell
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            self.studentTableView.beginUpdates()
+
+            self.studentFirstNameArray.remove(at: indexPath.row)
+            self.studentLastNameArray.remove(at: indexPath.row)
+            self.studentImageArray.remove(at: indexPath.row)
+            self.studentTableView.deleteRows(at: [indexPath], with: .fade)
+
+            self.studentTableView.endUpdates()
+        }
     }
 }
 
